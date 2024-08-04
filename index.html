@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Rentals</title>
+<!-- fontawesome 6.5.2 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- owl carousel min.css 2.3.4 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<!-- owl carousel default min.css 2.3.4 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<!-- costom css -->
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+
+<!-- topbar -->
+<div class="px-14 py-4 flex justify-between items-center" x-data="{ showSidebar: false }">
+    <!-- Logo and Toggle Button -->
+    <div class=" w-full lg:w-auto relative">
+        <a href="#" id="logo" class="flex items-center w-1/2 justify-between md:text-3xl font-extrabold text-primary">
+            <img src="assets/imgs/wood-logo.png" class="w-1/2 lg:w-full">
+        </a>
+        <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar" aria-label="Toggle sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }" 
+         class="fixed inset-y-0 left-0 w-64 bg-black text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 md:block lg:hidden">
+        <div class="p-4">
+            <button @click="showSidebar = false" class="text-white">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+        </div>
+        <ul class="mt-5 tracking-wider space-y-4 text-sm font-medium capitalize">
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">product</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">show know</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">tools</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">services</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">contact us</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200 hover:text-black">more</a></li>
+        </ul>
+    </div>
+
+    <!-- dekstop -->
+    <div class="hidden lg:block">
+        <ul class="nav-links capitalize flex items-center font-semibold text-slate-500 text-sm ">
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">Products</a>
+            </li>
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">Shop Know</a>
+            </li>
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">Tools</a>
+            </li>
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">Services</a>
+            </li>
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">Inspiration</a>
+            </li>
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">Contact Us</a>
+            </li>
+            <li class="  hover:text-white hover:underline hover:bg-red-600 duration-500 px-8 py-3 cursor-pointer">
+                <a href="javascript:void(0)">More</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<!-- banner -->
+<div class="banner mb-6">
+    <div class="owl-carousel banner-carousel">
+        <div class="img">
+            <img src="assets/imgs/banner1.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="assets/imgs/banner2.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="assets/imgs/banner3.jpg" alt="">
+        </div>
+        <div class="img">
+            <img src="assets/imgs/banner4.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- tools cards -->
+<section class="px-14 mb-6">
+    <h2 class="text-4xl text-center uppercase">
+        Ideal tools for <span class="font-semibold text-red-600">creating dream spaces</span> 
+    </h2>
+    <div class="grid grid-cols-2 lg:grid-cols-4 our-service-carousel">
+        <div class="group cursor-pointer">
+            <div class="card capitalize text-center bg-white rounded group-hover:-translate-y-3 group-hover:shadow-lg duration-300">
+                <div class="card-img w-1/4 mx-auto mt-16">
+                    <img src="assets/imgs/tolls1.png" class="w-full " alt="">
+                </div>
+                <div class="card-content py-5 "> 
+                    <div class="text-lg">cataract services</div>
+                <a href="javascript:void(0)" class="text-sm group-hover:underline text-cyan-800">
+                    Plywood Requiment Calculator
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="group cursor-pointer">
+            <div class="card capitalize text-center bg-white rounded group-hover:-translate-y-3 group-hover:shadow-lg duration-300">
+                <div class="card-img w-1/4 mx-auto mt-16">
+                    <img src="assets/imgs/tolls2.png" class="w-full " alt="">
+                </div>
+                <div class="card-content py-5 "> 
+                    <div class="text-lg">cataract services</div>
+                <a href="javascript:void(0)" class="text-sm group-hover:underline text-cyan-800">
+                    Visualizer
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="group cursor-pointer">
+            <div class="card capitalize text-center bg-white rounded group-hover:-translate-y-3 group-hover:shadow-lg duration-300">
+                <div class="card-img w-1/4 mx-auto mt-16">
+                    <img src="assets/imgs/tolls3.png" class="w-full " alt="">
+                </div>
+                <div class="card-content py-5 "> 
+                    <div class="text-lg">cataract services</div>
+                <a href="javascript:void(0)" class="text-sm group-hover:underline text-cyan-800">
+                    Colour Bar
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="group cursor-pointer">
+            <div class="card capitalize text-center bg-white rounded group-hover:-translate-y-3 group-hover:shadow-lg duration-300">
+                <div class="card-img w-1/4 mx-auto mt-16">
+                    <img src="assets/imgs/tolls4.svg" class="w-full " alt="">
+                </div>
+                <div class="card-content py-5 "> 
+                    <div class="text-lg">cataract services</div>
+                <a href="javascript:void(0)" class="text-sm group-hover:underline text-cyan-800">
+                    Products
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--  -->
+<section class="px-20 bg-slate-200 py-16">
+    <h2 class="text-4xl text-center uppercase mb-14">
+        Ideal tools for <span class="font-semibold text-red-600">creating dream spaces</span> 
+    </h2>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="relative mb-6 lg:m-0">
+            <div class="img w-full h-[380px]  border-b-2">
+                <img src="assets/imgs/ply2.jpg" class="h-full object-cover w-full" alt="">
+            </div>
+        
+            <div class="flex justify-center">
+                <div class="w-[70%] absolute p-2 shadow-lg -bottom-8 bg-white">
+                    <div class="capitalize text-center space-y-2">
+                        CLUB PRIME PLYWOOD
+                        <span class="price block text-sm text-slate-500">₹ 1600 - ₹ 6800</span>
+                        <button class="inline-block rounded-full text-xs bg-orange-500 text-white px-6 py-2 hover:bg-orange-600 duration-500">
+                            Buy Know
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative mb-6 lg:m-0">
+            <div class="img w-full h-[380px]  border-b-2">
+                <img src="assets/imgs/ply2.jpg" class="h-full object-cover w-full" alt="">
+            </div>
+        
+            <div class="flex justify-center">
+                <div class="w-[70%] absolute p-2 shadow-lg -bottom-8 bg-white">
+                    <div class="uppercase text-center space-y-2">
+                        sainik 710 plywood
+                        <span class="price block text-sm text-slate-500">₹ 1000 - ₹ 3200</span>
+                        <button class="inline-block rounded-full text-xs bg-orange-500 text-white px-6 py-2 hover:bg-orange-600 duration-500">
+                            Buy Know
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative mb-6 lg:m-0">
+            <div class="img w-full h-[380px]  border-b-2">
+                <img src="assets/imgs/ply1.jpg" class="h-full object-cover w-full" alt="">
+            </div>
+        
+            <div class="flex justify-center">
+                <div class="w-[70%] absolute p-2 shadow-lg -bottom-8 bg-white">
+                    <div class="uppercase text-center space-y-2">
+                        sainik mr plywood
+                        <span class="price block text-sm text-slate-500">₹ 900 - ₹ 4400</span>
+                        <button class="inline-block rounded-full text-xs bg-orange-500 text-white px-6 py-2 hover:bg-orange-600 duration-500">
+                            Buy Know
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- blog -->
+<section class="px-20 bg-slate-200 py-8 relative">
+    <h2 class="text-4xl text-center uppercase mb-14">
+        Ideal tools for <span class="font-semibold text-red-600">creating dream spaces</span> 
+    </h2>
+    
+    <div class="btns">
+        <button class="border px-4 py-2 shadow-lg rounded-full bg-white text-red-500 hover:bg-white duration-500 absolute left-14 z-10 top-[45%]" id="blogs-prev">
+            <i class="fas fa-angle-left"></i>
+        </button>
+        <button class="border px-4 py-2 shadow-lg rounded-full bg-white text-red-500 hover:bg-white duration-500 absolute right-14 z-10 top-[45%]" id="blogs-next">
+            <i class="fas fa-angle-right"></i>
+        </button>
+    </div>
+    <div class="owl-carousel blogs-carousel">
+        <a href="#" class="group">
+            <div class="card border bg-white relative overflow-hidden group">
+                <div class="card-img overflow-hidden h-[250px]">
+                    <img src="assets/imgs/blogs2.jpg" class="h-full w-full object-cover group-hover:scale-125 duration-700" alt="">
+                </div>
+                <div class="like-btn absolute top-4 right-4">
+                    <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
+                </div>
+                <div class="card-content uppercase p-4 space-y-2 text-slate-600 group-hover:underline group-hover:text-red-600">
+                    Sustainable & Trendy: Top 30 Kitchen Cupboards Designs
+                </div>
+            </div>
+        </a>
+        <a href="#" class="group">
+            <div class="card border bg-white relative overflow-hidden group">
+                <div class="card-img overflow-hidden h-[250px]">
+                    <img src="assets/imgs/blogs3.jpg" class="h-full w-full object-cover group-hover:scale-125 duration-700" alt="">
+                </div>
+                <div class="like-btn absolute top-4 right-4">
+                    <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
+                </div>
+                <div class="card-content uppercase p-4 space-y-2 text-slate-600 group-hover:underline group-hover:text-red-600">
+                    luxury modern kitchen design with the latest trends
+                </div>
+            </div>
+        </a>
+        <a href="#" class="group">
+            <div class="card border bg-white relative overflow-hidden group">
+                <div class="card-img overflow-hidden h-[250px]">
+                    <img src="assets/imgs/blogs4.png" class="h-full w-full object-cover group-hover:scale-125 duration-700" alt="">
+                </div>
+                <div class="like-btn absolute top-4 right-4">
+                    <i class="fa-regular fa-heart cursor-pointer text-white text-xl "></i>
+                </div>
+                <div class="card-content uppercase p-4 space-y-2 text-slate-600 group-hover:underline group-hover:text-red-600">
+                    Dining Table Designs: Perfect Solution for Small Spaces and Big Gatherings
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- logo -->
+<section class="brand-car cards px-10 py-4 relative rounded-lg">
+    <div class="owl-carousel logo-carousel  gap-4">
+        <a href="#" class="hover:shadow-md duration-500 border inline-block">
+            <div class="wood-img h-16 lg:h-full lg:p-6 w-full">
+                <img src="assets/imgs/wood-logo.png" class="h-full object-contain w-full" alt="">
+            </div>
+        </a>
+          
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="px-14 footer bg-black mt-10 py-6">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-2 lg:grid-cols-4">
+            <div class="tools-links capitalize">
+                <h6 class="text-lg text-white">tools</h6>
+                <ul class="mt-3 leading-8 text-gray-400">
+                    <li class="duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">colour bar</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">visulizers</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">dealer locator</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">safety system</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product-links capitalize">
+                <h6 class="text-lg text-white">Products</h6>
+                <ul class="mt-3 leading-6 text-gray-400">
+                    <li class="duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">plywood</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">venners</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">doors</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">face vaneer</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">laminates</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">exteria</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">MDF</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="contact-links capitalize">
+                <h6 class="text-lg text-white">contact</h6>
+                <ul class="mt-3 leading-6 text-gray-400">
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">partnerships</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">FAQ</a>
+                    </li>
+                    <li class=" duration-300 ease-linear hover:translate-x-3">
+                        <a href="javascript:void(0)">get in touch</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-info capitalize">
+                <h6 class="text-lg text-white">social</h6>
+                <ul class="mt-3 leading-7 text-gray-400 text-sm flex gap-6">
+                    <li>
+                        <i class="fa-brands fa-instagram flex justify-center items-center rounded-full cursor-pointer w-10 h-10 bg-pink-700 text-white hover:bg-pink-600"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook-f flex justify-center items-center rounded-full cursor-pointer w-10 h-10 bg-blue-700 text-white hover:bg-blue-600"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-youtube flex justify-center items-center rounded-full cursor-pointer w-10 h-10 bg-red-600 text-white hover:bg-red-500"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-x-twitter flex justify-center items-center rounded-full cursor-pointer w-10 h-10 bg-slate-700 text-white hover:bg-slate-600"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- footer bottom -->
+<div class="px-14 footer-bottom bg-slate-100 capitalize">
+    <div class="container mx-auto flex justify-between text-gray-500 border-t-2 py-3 max-lg:block">
+        <span>
+            copyright &copy; to shiftingbazar all right reserved
+        </span>
+        <span>
+            made with <i class="fas fa-heart text-red-500"></i> <a href="https://spreadmycareer.in/">SpreadMyBuisness</a>
+        </span>
+    </div>
+</div>
+
+</body>
+<!-- All JS Links -->
+<!-- AlpineJs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.js" defer></script>
+<!-- Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- Custom Js -->
+<script src="assets/js/js.js"></script>
+<!-- Js Link Ends Here -->
+
+</html>
